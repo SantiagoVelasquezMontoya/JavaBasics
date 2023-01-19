@@ -18,7 +18,7 @@ public class ClientList {
 
     public void getClients(){
         clientList.forEach((item)->{
-            System.out.println(item.getName());
+            System.out.println("Client Name: "+ item.getName() + "Identified with CC: "  + item.getCc() + "Products: " +  item.getProducts());
         });
     }
 

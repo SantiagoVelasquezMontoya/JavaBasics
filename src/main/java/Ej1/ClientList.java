@@ -38,7 +38,7 @@ public class ClientList {
         for(int i  = 0; i < currentArrayLength; i++){
             if(runOnceFlag){
                 if(clients[i] != null){
-                System.out.println(clients[i].getName());
+                System.out.println("Client name: " + clients[i].getName() + "With CC: " +  clients[i].getCc());
                 }
             } else{
                 if(clientsLong[i] != null){
