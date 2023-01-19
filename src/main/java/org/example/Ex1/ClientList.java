@@ -1,11 +1,4 @@
-package org.example;
-
-import java.sql.Array;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+package org.example.Ex1;
 
 public class ClientList {
     private Client[] clients  = new Client[4];
@@ -15,6 +8,10 @@ public class ClientList {
 
 
     public void addClient(String name, int cc){
+        if(!name.matches("[a-zA-Z]+")){
+            System.out.println("Please add a valid Name");
+            return;
+        }
         if(getClientsQuantity() >= 10){
             System.out.println("Client list full, please delete a client ");
             return;
