@@ -29,4 +29,11 @@ public class Client {
         this.cc = cc;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", cc=" + cc +
+                '}';
+    }
 }

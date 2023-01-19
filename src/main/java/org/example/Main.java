@@ -11,8 +11,8 @@ public class Main {
         ClientList clients = new ClientList();
         int option = 0;
 
-        while(option != 5){
         System.out.println("Welcome...");
+        while(option != 5){
         System.out.println("1. Add a new client");
         System.out.println("2. Delete a client by Index");
         System.out.println("3. Search for a client");
@@ -26,12 +26,9 @@ public class Main {
                 System.out.println("Please enter your Name: ");
                 String nameInput = input.nextLine();
                 System.out.println("Please enter your Id number: ");
-                Integer idInput = Integer.parseInt(input.nextLine());
-                if(!idInput.toString().matches("[0-9]+")){
-                    System.out.println("Please input a valid CC ");
-                }
+                int idInput = Integer.parseInt(input.nextLine());
                 clients.addNewClient(nameInput, idInput);
-                clients.addCLient(nameInput, idInput);
+                clients.addClient(nameInput, idInput);
                 break;
             case 2:
                 System.out.println("Please enter Client Index to Delete: ");
