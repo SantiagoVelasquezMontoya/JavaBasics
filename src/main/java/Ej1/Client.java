@@ -1,4 +1,4 @@
-package org.example.Ex1;
+package Ej1;
 
 public class Client {
     private String name;

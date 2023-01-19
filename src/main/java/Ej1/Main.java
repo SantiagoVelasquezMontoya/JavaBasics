@@ -1,4 +1,4 @@
-package org.example.Ex1;
+package Ej1;
 
 import java.util.Scanner;
 
@@ -49,18 +49,6 @@ public class Main {
 
 
 
-
-
-
-
     }
 
-    public void openMenu(){
-        System.out.println("Welcome...");
-        System.out.println("1. Add a new client");
-        System.out.println("2. Delete a client by Index");
-        System.out.println("3. Search for a client");
-        System.out.println("4. Show all clients");
-        System.out.println("5. Exit");
-    }
 }

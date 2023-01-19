@@ -9,8 +9,6 @@ public class Main {
 
     public static void main(String[] args){
         System.out.println("YEs");
-
-
         Scanner input = new Scanner(System.in);
         ClientList clients = new ClientList();
         int option = 0;

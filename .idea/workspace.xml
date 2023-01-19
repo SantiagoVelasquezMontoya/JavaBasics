@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dba7d447-fec1-476c-b9ce-8b2b5d52c724" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ex2/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ex2/ClientList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Ex2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ex3/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ex3/ClientList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ex3/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Ex3/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ex1/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ex1/ClientList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Ex1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ClientList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ex2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ex2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ex1/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ej1/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ex1/ClientList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ej1/ClientList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ex1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ej1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Ex2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Ex2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Ex1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Ex1/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +58,26 @@
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Ex2.Main">
+  <component name="RunManager" selected="Application.Ex3.Main">
     <configuration name="Ex2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Ex2.Main" />
       <module name="Semana1Miercoles" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Ex2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex3.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex3.Main" />
+      <module name="Semana1Miercoles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex3.Main" />
         <item itemvalue="Application.Ex2.Main" />
         <item itemvalue="Application.Main" />
       </list>
