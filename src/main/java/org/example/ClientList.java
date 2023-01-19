@@ -14,38 +14,14 @@ public class ClientList {
     private boolean runOnceFlag = true;
 
 
-    private ValidationService validationService;
-
-
-    public void addNewClient(String name, Integer cc){
-        System.out.println(!name.matches("[aA-zZ]+"));
-        if(!name.matches("[aA-zZ]+")){
-            System.out.println("Please enter A valid Name and try again..");
-            return;
-        }
-        System.out.println(!cc.toString().matches("[0-9]+"));
-        if(!cc.toString().matches("[0-9]+")){
-            System.out.println("Please enter A valid CC and try again..");
-            return;
-        }
-        return;
-        //if(clients.size() >= 4){
-          //  System.out.println("Client list full please delete someone.");
-        //    return;
-        //}
-        //clients.add(new Client(name, cc));
-    }
-
-    public void deleteClient(int index){
-       // clients.remove(index);
-
-        System.out.println("Client with id :" + index + " Was deleted");
-    }
-
     public void addClient(String name, int cc){
+        if(getClientsQuantity() >= 10){
+            System.out.println("Client list full, please delete a client ");
+            return;
+        }
         if(getClientsQuantity() == 4  && runOnceFlag){
-            for(int  i  = 0; i > clients.length; i++){
-                System.out.println(clients[i].toString());
+            for(int  i  = 0; i < clients.length; i++){
+                clientsLong[i] = new Client();
                 clientsLong[i].setName(clients[i].getName());
                 clientsLong[i].setCc(clients[i].getCc());
                 disableFlag();
@@ -54,23 +30,22 @@ public class ClientList {
         if(runOnceFlag){
             clients[getClientsQuantity()] = new Client(name, cc);
              increaseFlag();
-            System.out.println(getClientsQuantity());
         } else{
             clientsLong[getClientsQuantity()] = new Client(name, cc);
             increaseFlag();
         }
     }
 
-
-
     public Client[] getClients(){
-        int iterator = getClientsQuantity() >= 4  ? clientsLong.length  : clients.length;
-        for(int i = 0; i >= iterator; i++){
-            if(clients[i] != null){
-                if(getClientsQuantity() >= 4){
-                System.out.println(clientsLong[i].getName());
-                } else{
+        int currentArrayLength = getClientsQuantity() > 4  ? clientsLong.length  : clients.length;
+        for(int i  = 0; i < currentArrayLength; i++){
+            if(runOnceFlag){
+                if(clients[i] != null){
                 System.out.println(clients[i].getName());
+                }
+            } else{
+                if(clientsLong[i] != null){
+                System.out.println(clientsLong[i].getName());
                 }
             }
         }
@@ -83,36 +58,41 @@ public class ClientList {
         }
     }
 
-    public Client getClient(int cc){
-        Client foundClient = new Client();
-        //clients.forEach((client) -> {
-          //  if(client.getCc() == cc){
-            //    foundClient.setName(client.getName());
-            //    foundClient.setCc(client.getCc());
-           // }
-        //});
-       // System.out.println(foundClient.getName()) ;
-        return foundClient;
-    }
 
-    public void deleteClient2(int index){
-        for(int i = 0; i <= clients.length - 1; i++){
-            //System.out.println(clients[i]);
-            if(clients[i] != null && i == index){
-                clients[i] = null;
+
+    public void deleteClient(int index){
+        int currentArrayLength = getClientsQuantity() > 4  ? clientsLong.length  : clients.length;
+        for(int i  = 0; i < currentArrayLength; i++){
+            if(runOnceFlag){
+                if(clients[i] != null && i == index){
+                    clients[i] = null;
+                }
+            } else{
+                if(clientsLong[i] != null && i == index){
+                    clientsLong[i] = null;
+                    }
+                }
             }
-        }
+
     }
 
     public Client searchClient(int cc){
+        int currentArrayLength = getClientsQuantity() > 4  ? clientsLong.length  : clients.length;
         Client foundClient = new Client();
-        for(int i = 0; i <= clients.length - 1; i++){
-            //System.out.println(clients[i]);
-            if(clients[i] != null && clients[i].getCc() == cc){
-                foundClient.setName(clients[i].getName());
-                foundClient.setCc(clients[i].getCc());
+        for(int i  = 0; i < currentArrayLength; i++){
+            if(runOnceFlag){
+                if(clients[i] != null && clients[i].getCc() == cc){
+                    foundClient.setName(clients[i].getName());
+                    foundClient.setCc(clients[i].getCc());
+                }
+            } else{
+                if(clientsLong[i] != null && clientsLong[i].getCc() == cc){
+                    foundClient.setName(clientsLong[i].getName());
+                    foundClient.setCc(clientsLong[i].getCc());
+                }
             }
         }
+        System.out.println("Found Client " + foundClient);
         return foundClient;
     }
 
